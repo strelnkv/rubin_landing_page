@@ -34,15 +34,13 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100dvh;
   color: white;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
 }
-.mobile__menu {
-  display: none;
-}
+
 .header__burger-menu {
   display: none;
 }
@@ -233,12 +231,40 @@ header {
   height: 2px;
   background-color: #ffffff;
 }
-.close span {
+.mobile__burger-menu span {
   background-color: black;
 }
+
+.header__burger-menu .line1 {
+  transform: rotate(45deg);
+}
+
+.header__burger-menu .line2 {
+  transform: rotate(-45deg);
+}
+.mobile__burger-menu {
+  border: none;
+  background-color: transparent;
+}
+
+.mobile__burger-menu img {
+  width: 14px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .mobile__menu {
+  animation: fadeIn 0.15s ease-in;
+  opacity: 0;
   display: none;
-  height: 100svh;
+  height: 100dvh;
 }
 
 .mobile__menu.active {
@@ -247,6 +273,7 @@ header {
   inset: 0;
   background-color: #fff;
   z-index: 10;
+  opacity: 1;
 }
 
 .mobile__menu-content {
@@ -282,6 +309,7 @@ header {
 }
 .mobile__nav-list {
   padding: 32px 16px;
+  margin: 0;
 }
 .mobile__nav-item {
   font-size: 16px;
@@ -338,6 +366,10 @@ header {
   white-space: nowrap;
   width: 100%;
 }
+.header__contact-phone-icon-blue {
+  width: 16px;
+}
+
 /* всплывающее меню  */
 
 .main {
@@ -432,7 +464,7 @@ header {
 }
 @media (max-width: 768px) {
   .main-screen {
-    height: 100svh;
+    height: 100dvh;
   }
   .main__highlight {
     width: 179px;
