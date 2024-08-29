@@ -1,0 +1,463 @@
+:root {
+  --breakpoint-small: 576px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 992px;
+  --breakpoint-xlarge: 1255px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+p,
+h1 {
+  margin: 0;
+}
+.main-screen {
+  background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 38.75%,
+      rgba(0, 0, 0, 0.8) 71.96%
+    ),
+    linear-gradient(360deg, rgba(0, 0, 0, 0) 76.46%, rgba(0, 0, 0, 0.2) 83.07%),
+    url("../images/Rubin\ —\ Camera\ 1-2\ 1\ 2.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header__checkbox {
+  display: none;
+}
+#header__checkbox-span {
+  margin: 0;
+}
+.header__label span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #fff;
+  margin-top: 12px;
+  transition: all 0.3s;
+}
+.header__logo-black {
+  display: none;
+}
+/* Стили для лейбла, который будет выглядеть как кнопка */
+.header__label {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  /* height: 24px; */
+  background: transparent;
+  cursor: pointer;
+  margin-left: 16px;
+}
+.header__contact-phone-icon-blue {
+  display: none;
+}
+
+/* Изменение вида при включенном чекбоксе */
+.header__checkbox:checked + .header__label span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__checkbox:checked + .header__label span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.header__checkbox:checked + .header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  align-items: self-start;
+}
+
+.header__checkbox:checked + .header span {
+  background-color: black;
+}
+
+.header__checkbox:checked + .header .header__logo-image {
+  display: none;
+}
+
+.header__checkbox:checked + .header .header__logo-black {
+  display: block;
+}
+
+.header__checkbox:checked + .header .header__contact-phone-icon {
+  display: none;
+}
+
+.header__checkbox:checked + .header .header__contact-phone-icon-blue {
+  display: block;
+  width: 16px;
+}
+
+.header__checkbox:checked + .header .header__contact-mobile {
+  border: 1px solid rgb(11, 131, 207);
+}
+.header__label {
+  display: none;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 25px 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header__logo img {
+  max-height: 28px;
+}
+
+.nav {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.nav__list {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  padding: 0;
+}
+
+.nav__item {
+  white-space: nowrap;
+}
+
+.nav__item:hover {
+  text-decoration: underline;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 40px;
+}
+
+.header__contact-phone {
+  white-space: nowrap;
+}
+.header__contact-mobile {
+  display: none;
+}
+.header__contact-phone a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+}
+
+.header__contact-phone:hover {
+  text-decoration: underline;
+}
+
+.header__contact-callback-button {
+  color: white;
+  padding: 13px 22px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  font-family: PT Sans;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.header__contact-callback-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1255px) {
+  .header__contact-mobile {
+    display: block;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 12px 12px;
+  }
+  .header__contact {
+    display: block;
+  }
+  .header__contact-phone {
+    display: none;
+  }
+  .header__contact-callback-button {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-screen {
+    background-image: url("../images/Rubin — Camera 1-2 1 2.jpeg");
+
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
+  .header__logo {
+    border-right: none;
+    padding: 23px;
+  }
+  .nav {
+    display: none;
+  }
+
+  .header__contact {
+    padding-right: 16px;
+  }
+
+  .header__contact-callback-button {
+    display: none;
+  }
+  .header__label {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__hamburger span {
+    width: 18px;
+    margin-top: 9px;
+  }
+  .header__logo {
+    padding: 18px;
+  }
+  .header__logo-image {
+    width: 129px;
+  }
+  .header__contact-phone-icon {
+    width: 16px;
+  }
+}
+
+.main {
+  padding: 32px 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.main__highlight {
+  width: 229px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 30px;
+  padding: 11px 16px;
+  font-size: 24px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.main__title {
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 73px;
+}
+
+.main__header-description {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 13px;
+  padding-bottom: 17px;
+}
+.main__title-metro img {
+  width: 55px;
+}
+
+.main__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.main__header-actions-button {
+  background-color: rgb(11, 131, 207);
+  padding: 24px 53px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.main__header-actions-button:hover {
+  background-color: rgb(3, 125, 200);
+}
+
+.main__header-actions-price {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .main__title {
+    font-size: 48px;
+    text-align: center;
+  }
+  .main__header-description {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    max-width: 610px;
+  }
+  .main__header-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .main-screen {
+    height: 100dvh;
+  }
+  .main__highlight {
+    width: 179px;
+    font-size: 18px;
+    gap: 8px;
+  }
+  .main__highlight img {
+    width: 17px;
+  }
+  .main__title {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 29.9px;
+  }
+  .main__title img {
+    width: 27px;
+  }
+  .main__header-description {
+    font-family: PT Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: center;
+  }
+  .main__header-actions-button {
+    width: 100%;
+  }
+  .main__header-actions-price {
+    font-size: 18px;
+  }
+}
+.main__additional-list {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding-left: 88px;
+  padding-bottom: 40px;
+}
+
+.main__additional-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 19px 24px 19px 56px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main__additional-item-term {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main__additional-item strong {
+  font-size: 20px;
+  font-weight: 700;
+}
+.main__additional-note {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 28px;
+}
+
+@media (max-width: 1024px) {
+  .main__additional-list {
+    justify-content: center;
+  }
+  .main__additional-item-square {
+    display: none;
+  }
+  .main__additional-item-address {
+    border-right: none;
+  }
+}
+@media (max-width: 768px) {
+  .main__additional-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    padding: 16px;
+  }
+  .main__additional-item-address {
+    display: none;
+  }
+
+  .main__additional-item-term {
+    border-right: none;
+    text-align: center;
+    gap: 8px;
+  }
+  .main__additional-item-term p {
+    font-size: 14px;
+  }
+  .main__additional-item-term strong {
+    font-size: 16px;
+  }
+}

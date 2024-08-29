@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЖК Рубин</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/Лого_Рубин_гориз 1.png" type="image/png" />
+  </head>
+  <body>
+    <div class="main-screen">
+      <!-- <div class="mobile__menu"></div> -->
+      <input id="1" type="checkbox" class="header__checkbox" />
+      <header class="header">
+        <label for="1" class="header__label">
+          <span id="header__checkbox-span"></span>
+          <span></span>
+        </label>
+        <div class="header__menu mobile__menu">
+          <div class="header__logo">
+            <a href="#"
+              ><img
+                class="header__logo-image"
+                src="./images/logo.svg"
+                alt="Рубин" />
+              <img
+                src="./images/logo-invert.png"
+                class="header__logo-black"
+                alt=""
+            /></a>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">О проекте</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Планировки</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Способы оплаты</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Расположение</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#">Фото</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__contact">
+          <a class="header__contact-mobile" href="tel:+73832304568">
+            <img
+              class="header__contact-phone-icon"
+              src="./images/callcalling.svg"
+              alt="" />
+            <img
+              class="header__contact-phone-icon-blue"
+              src="./images/call-blue.png"
+              alt=""
+          /></a>
+
+          <p class="header__contact-phone">
+            <a href="tel:+73832304568">+7 (383) 230-45-68 </a>
+          </p>
+          <button class="header__contact-callback-button">
+            Обратный звонок
+          </button>
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="main__highlight">
+          <img src="./images/fire.svg" alt="" /><span>Ипотека от 6%</span>
+        </div>
+        <div class="main__header">
+          <h1 class="main__title">
+            ЖК В 15 МИНУТАХ ХОДЬБЫ <br />ДО
+            <span class="main__title-metro"
+              ><img src="./images/metro.png" alt="Метро"
+            /></span>
+            «БЕРЕЗОВАЯ РОЩА»<br />ОТ 5,4 МЛН РУБ.
+          </h1>
+          <h3 class="main__header-description">
+            Идеальное место для&nbsp;жизни рядом с&nbsp;зеленым парком
+            Березовая&nbsp;роща
+          </h3>
+        </div>
+        <div class="main__header-actions">
+          <button class="main__header-actions-button">
+            Подобрать квартиру
+          </button>
+          <p class="main__header-actions-price">от 25 600 руб/мес</p>
+        </div>
+      </div>
+      <div class="main__additional-list">
+        <div class="main__additional-item main__additional-item-term">
+          <p>Срок сдачи</p>
+          <p><strong>1 квартал 2025 г.</strong></p>
+          <p class="main__additional-note">На полгода раньше срока</p>
+        </div>
+        <div class="main__additional-item main__additional-item-address">
+          <p>Адрес</p>
+          <p><strong>ул. Гоголя 222, г. Новосибирск</strong></p>
+        </div>
+        <div class="main__additional-item main__additional-item-square">
+          <p>Площадь</p>
+          <p>
+            <strong>от 30 м<sup>2</sup> до 90 м<sup>2</sup></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
