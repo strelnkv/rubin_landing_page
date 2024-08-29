@@ -429,7 +429,7 @@ header {
 }
 @media (max-width: 768px) {
   .main-screen {
-    height: 100dvh;
+    height: 100svh;
   }
   .main__highlight {
     width: 179px;
