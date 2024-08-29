@@ -16,25 +16,85 @@
   </head>
   <body>
     <div class="main-screen">
-      <!-- <div class="mobile__menu"></div> -->
-      <input id="1" type="checkbox" class="header__checkbox" />
+      <div class="mobile__menu active">
+        <div class="mobile__menu-content">
+          <div class="mobile__header">
+            <div class="mobile__header__container">
+              <button
+                class="header__burger-menu close"
+                onclick="toggleMobileMenu()"
+              >
+                <span></span>
+                <span></span>
+              </button>
+              <div class="mobile__menu-logo">
+                <img src="./images/logo-invert.png" alt="Рубин" />
+              </div>
+              <a class="mobile__contact-mobile" href="tel:+73832304568">
+                <img
+                  class="header__contact-phone-icon"
+                  src="./images/call-blue.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <nav class="mobile__nav">
+            <ul class="mobile__nav-list">
+              <li class="mobile__nav-item">
+                <a class="mobile__nav-link" href="#">О проекте</a>
+              </li>
+              <li class="mobile__nav-item">
+                <a class="mobile__nav-link" href="#">Планировки</a>
+              </li>
+              <li class="mobile__nav-item">
+                <a class="mobile__nav-link" href="#">Способы оплаты</a>
+              </li>
+              <li class="mobile__nav-item">
+                <a class="mobile__nav-link" href="#">Расположение</a>
+              </li>
+              <li class="mobile__nav-item">
+                <a class="mobile__nav-link" href="#">Фото</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mobile__social-media">
+            <p class="mobile__social-media-title">Мы в социальных сетях</p>
+            <div class="mobile__social-media-icons">
+              <a href="#" class="social-media__icon">
+                <img src="./images/youtube.png" alt="YouTube" />
+              </a>
+              <a href="#" class="social-media__icon">
+                <img src="./images/telegram.png" alt="Telegram" />
+              </a>
+              <a href="#" class="social-media__icon">
+                <img src="./images/vk.png" alt="VK" />
+              </a>
+            </div>
+            <p class="mobile__contact-phone">
+              <a href="tel:+73832304568">+7 (383) 230-45-68 </a>
+            </p>
+            <button class="mobile__contact-callback-button">
+              Обратный звонок
+            </button>
+          </div>
+        </div>
+      </div>
+
       <header class="header">
-        <label for="1" class="header__label">
-          <span id="header__checkbox-span"></span>
-          <span></span>
-        </label>
-        <div class="header__menu mobile__menu">
+        <div class="header__menu">
+          <button class="header__burger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+          </button>
           <div class="header__logo">
             <a href="#"
               ><img
                 class="header__logo-image"
                 src="./images/logo.svg"
-                alt="Рубин" />
-              <img
-                src="./images/logo-invert.png"
-                class="header__logo-black"
-                alt=""
-            /></a>
+                alt="Рубин"
+              />
+            </a>
           </div>
           <nav class="nav">
             <ul class="nav__list">
@@ -53,25 +113,22 @@
               <li class="nav__item"><a class="nav__link" href="#">Фото</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="header__contact">
-          <a class="header__contact-mobile" href="tel:+73832304568">
-            <img
-              class="header__contact-phone-icon"
-              src="./images/callcalling.svg"
-              alt="" />
-            <img
-              class="header__contact-phone-icon-blue"
-              src="./images/call-blue.png"
-              alt=""
-          /></a>
+          <div class="header__contact">
+            <a class="header__contact-mobile" href="tel:+73832304568">
+              <img
+                class="header__contact-phone-icon"
+                src="./images/callcalling.svg"
+                alt=""
+              />
+            </a>
 
-          <p class="header__contact-phone">
-            <a href="tel:+73832304568">+7 (383) 230-45-68 </a>
-          </p>
-          <button class="header__contact-callback-button">
-            Обратный звонок
-          </button>
+            <p class="header__contact-phone">
+              <a href="tel:+73832304568">+7 (383) 230-45-68 </a>
+            </p>
+            <button class="header__contact-callback-button">
+              Обратный звонок
+            </button>
+          </div>
         </div>
       </header>
 
