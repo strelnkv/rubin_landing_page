@@ -184,6 +184,9 @@ header {
     border-right: none;
     padding: 23px;
   }
+  .header__logo-image {
+    width: 155px;
+  }
   .nav {
     display: none;
   }
@@ -235,6 +238,7 @@ header {
 }
 .mobile__menu {
   display: none;
+  height: 100svh;
 }
 
 .mobile__menu.active {
@@ -249,7 +253,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 100dvh;
 }
 
 .mobile__menu-logo {
